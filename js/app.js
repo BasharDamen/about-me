@@ -1,4 +1,4 @@
-/*'use strict';
+'use strict';
 
 
 let userName = prompt('What is your name?');
@@ -154,4 +154,3 @@ for(let i=0 ; i < 7 ; i++){
             break;
         }
 }
-*/
