@@ -21,7 +21,6 @@ main {
 }
 
 
-
 article {
     margin: 31px 0;
     display: flex;
@@ -38,6 +37,14 @@ h2 {
 
 p {
     margin: 5px 30px;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+ul{
+    list-style: square;
 }
 
 footer {
