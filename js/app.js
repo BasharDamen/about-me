@@ -152,8 +152,12 @@ function myAge(){
             } 
         }
         
-        if (guessNum !== 24) {
+        if (guessNum < 24) {
+            alert('too low')
             console.log(guessNum);
+        }
+        if (guessNum > 24 ){
+            alert('too high')
         }
         if (i == 3) {
             alert('the answer is 24')
