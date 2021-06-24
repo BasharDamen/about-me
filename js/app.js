@@ -137,56 +137,69 @@ function shareWebsite (){
     let score = 0
 function myAge(){
 
-    let guessNum = prompt('Guess how old am I?' , 'hint: less than 35 and more than 15');
     for(let i=0 ; i < 4 ; i++){
-        if ( guessNum < 24){
-            prompt('too low, try again');
-            console.log(i);
+
+        let guessNum = prompt('Guess how old am I?' , 'hint: less than 35 and more than 15');
+
+        for(let j=0 ; j<4 ; j++ ){
+
+            if (guessNum == 24){
+                alert('Correct');
+                console.log(guessNum);
+                score++;
+                i=4;
+                break;
+            } 
         }
-        if (guessNum > 24){
-            prompt('too high, try again')
-            console.log(i);
+        
+        if (guessNum !== 24) {
+            console.log(guessNum);
         }
-        if(guessNum == 24){
-            alert('correct answer');
-            score++
-            break;
+        if (i == 3) {
+            alert('the answer is 24')
         }
-        if ( i == 3 ){
-            alert("the correct answer is 24");
-        }
-    }
+        console.log(i);
+    } 
+    
 }
 myAge();
 
     
 
-function jsStatement (){
 
-    let js = [' for ' , ' if..else ' , ' text-align ' , ' <p></p> ' , ' var ' , 'padding' , 'switch' , 'alert' , 'prompt' , 'let']
-    let guessQues = prompt('which of the following is related a Javascript statement ' + js , 'you have 7 attempt' );
+
+let $choices = [' for ' , ' if..else ' , ' text-align ' , ' <p></p> ' , ' var ' , 'padding' , 'switch' , 'alert' , 'prompt' , 'let']                    
+let js = ['for' , 'if..else' , 'var' , 'switch' , 'alert' , 'prompt' , 'let']
+
+function $choose(){
+
+    let correct = false;
+    // // first for loop for thr number of guessing time 
+    for (let i = 0; i < 7; i++) {
+    //     // 6 time looping [# of attempts]
+        console.log(i);
+        let question7 = prompt('which of the following is related a Javascript statement ' + $choices);
+    //     // the inner loop for the correct answer
+        for (let j = 0; j < js.length; j++) {
+            console.log('before', j);
+            if (question7 == js[j]) {
     
+                alert('Correct Answer');
+                console.log('after', js[j]);
+                score++;
+                correct = true;
+                i = 9;
+                break;
+            }
     
-    for(let i=0 ; i < 7 ; i++){
-        if ( guessQues == "for" || guessQues == "if..else" || guessQues == "var" || guessQues == 'switch' || guessQues == 'alert' , guessQues == 'prompt' , 'let'){
-            guessQues = prompt( 'correct answer', js );
-            //alert('correct')
-            console.log(i + guessQues);
-            score++;
-        } 
-        if ( guessQues == "text-align" || guessQues == "<p></p>" || guessQues == "padding" ){
-            guessQues = prompt('Wrong awnser', js );
-            //alert('wrong')
-            console.log(i + guessQues);
         }
-        if ( i == 6 ){
-            alert("the correct answers are 'for','if..else','var','switch',  'alert' , 'prompt' , 'let'");
-            alert('your score is ' + score)
+        
+        if (correct) {
             break;
         }
-    }
-}
-
-jsStatement();
-
+        if(i == 6){
+            alert('the correct answer is: ' + js)
+        }
     
+    }
+}$choose();
