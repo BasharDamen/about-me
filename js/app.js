@@ -4,7 +4,6 @@ let userName = prompt('What is your name?');
 function welcome (){
 
     alert('You Are Welcom ' + userName)
-    console.log(userName)
     
 }
 welcome();
@@ -21,13 +20,11 @@ function theAge (){
         case 'yes':
             case 'y':
                 alert('you are allowed to get in')
-                //console.log(ques1)
                 break;
                 
                 case 'no':
                     case 'n':
                         alert('you are not allowed to get in');
-                        //console.log(ques1)
                         break;
                         
                         default:
@@ -46,13 +43,11 @@ function jop(){
         case 'YES':
             case 'Y':
                 alert('Hello mate');
-        //console.log(ques2);
         break;
         
         case 'NO':
             case 'N':
                 alert('Unlucky')
-                //console.log(ques2);
                 break;
                 
                 default:
@@ -70,13 +65,11 @@ switch (ques3.toLocaleUpperCase()){
     case 'YES':
         case 'Y':
             alert('GREAT')
-            //console.log(ques3);
             break;
             
             case 'NO':
                 case 'N':
                     alert('hope it get better')
-                    //console.log(ques3);
                     break;
                     
                     default:
@@ -93,13 +86,11 @@ function visitWebsite(){
         case 'yes':
             case 'y':
                 alert('welcome again')
-                //console.log(ques4);
                 break;
                 
                 case 'no':
                     case 'n':
                         alert('Hope you enjoy')
-                        //console.log(ques4)
                         break;
                         
                         default:
@@ -116,13 +107,11 @@ function shareWebsite (){
         case 'yes':
             case 'y':
                 alert('Thank you')
-                //console.log(ques5);
                 break;
                 
                 case 'no':
                     case 'n':
                         alert('wrong answer')
-                        //console.log(ques5);
                         break;
                         
                         default:
@@ -145,7 +134,6 @@ function myAge(){
 
             if (guessNum == 24){
                 alert('Correct');
-                console.log(guessNum);
                 score++;
                 i=4;
                 break;
@@ -154,7 +142,6 @@ function myAge(){
         
         if (guessNum < 24) {
             alert('too low')
-            console.log(guessNum);
         }
         if (guessNum > 24 ){
             alert('too high')
@@ -162,7 +149,6 @@ function myAge(){
         if (i == 3) {
             alert('the answer is 24')
         }
-        console.log(i);
     } 
     
 }
@@ -181,15 +167,12 @@ function $choose(){
     // // first for loop for thr number of guessing time 
     for (let i = 0; i < 7; i++) {
     //     // 6 time looping [# of attempts]
-        console.log(i);
         let question7 = prompt('which of the following is related a Javascript statement ' + $choices);
     //     // the inner loop for the correct answer
         for (let j = 0; j < js.length; j++) {
-            console.log('before', j);
             if (question7 == js[j]) {
     
                 alert('Correct Answer');
-                console.log('after', js[j]);
                 score++;
                 correct = true;
                 i = 9;
